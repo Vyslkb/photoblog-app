@@ -3,7 +3,7 @@
 <h1>Photo Blog</h1>
 
 <% @posts.each do |post| %>
-<%= image_tag post.image.profile_size.url %>
+<%= link_to image_tag(post.image.profile_size.url), post %>
 <h2><%= link_to post.title, post %></h2>
 <%= post.description %>
 <br>
